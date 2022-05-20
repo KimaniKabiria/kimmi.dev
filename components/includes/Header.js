@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from 'next/image'
+
+import Logo from "../../assets/images/logo.png"
+import LogoWhite from "../../assets/images/logo-white.png"
 
 const sunIcon = (
   <svg
@@ -80,6 +84,31 @@ const ThemeSwitcher = () => {
   );
 };
 
+const LogoSwitch = () => {
+  return (
+    <div>
+      <div className="dark:hidden block">
+        <Image
+          className=""
+          src={Logo}
+          alt="Logo"
+          width= {230}
+          height={50}
+        />
+      </div>
+      <div className="hidden dark:block">
+        <Image
+          className=""
+          src={LogoWhite}
+          alt="Logo"
+          width= {230}
+          height={50}
+        />
+      </div>
+    </div>
+  )
+}
+
 export default function Header() {
  const [animateHeader, setAnimateHeader] = useState(false);
  useEffect(() => {
@@ -103,8 +132,8 @@ return (
       {/* <div className="mx-auto "> */}
         <div className={`flex w-full py-6 ${animateHeader && "py-2"} mx-auto items-center px-8 trasition ease-in-out duration-500`}>
           <div className="flex justify-start mx-auto">
-            <a href="https://themeptation.net" className="text-xl font-bold tracking-tighter text-indigo-400 pr-8">
-              Themeptation
+            <a href="#" className="text-xl font-bold tracking-tighter text-indigo-400 pr-8">
+              <LogoSwitch />
             </a>
           </div>
           <div className="mx-auto">
