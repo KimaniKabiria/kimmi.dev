@@ -86,7 +86,7 @@ const ThemeSwitcher = () => {
 
 const LogoSwitch = () => {
   return (
-    <div>
+    <div className="flex-shrink w-58 flex">
       <div className="dark:hidden block">
         <Image
           className=""
@@ -128,9 +128,9 @@ export default function Header() {
    { title: "Contact", url: "https://themeptation.net" }
  ];
 return (
- <header className={`w-full backdrop-filter backdrop-blur-lg bg-white/10 dark:bg-black/10 sticky flex z-40 top-0 trasition ease-in-out duration-500 ${animateHeader && "shadow-xl"}`}>
+ <header className={`w-full sticky backdrop-filter backdrop-blur-lg flex z-40 top-0 trasition ease-in-out duration-500 ${animateHeader && "shadow-xl"}`}>
       {/* <div className="mx-auto "> */}
-        <div className={`flex w-full py-6 ${animateHeader && "py-2"} mx-auto items-center px-8 trasition ease-in-out duration-500`}>
+        <div className={`flex w-full py-6 ${animateHeader && "py-2 bg-white/10 dark:bg-black/10 "} mx-auto items-center px-8 trasition ease-in-out duration-500`}>
           <div className="flex justify-start mx-auto">
             <a href="#" className="text-xl font-bold tracking-tighter text-indigo-400 pr-8">
               <LogoSwitch />
