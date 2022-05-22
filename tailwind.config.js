@@ -6,4 +6,10 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   presets: [require('./utils/tailwind-preset')],
+  theme:{
+    extend:{
+      colors: {
+        'kimmi-teal': '#009193'
+      },}
+  },
 };

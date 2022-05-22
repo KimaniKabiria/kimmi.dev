@@ -9,12 +9,12 @@ import {
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
-import CustomLink from '../../components/CustomLink';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import Layout, { GradientBackground } from '../../components/Layout';
-import SEO from '../../components/SEO';
+import ArrowIcon from '../../components/includes/ArrowIcon';
+import CustomLink from '../../components/includes/CustomLink';
+import Footer from '../../components/includes/Footer';
+import Header from '../../components/includes/Header';
+import Layout, { GradientBackground } from '../../components/includes/Layout';
+import SEO from '../../components/includes/SEO';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
