@@ -4,7 +4,7 @@ export const getGlobalData = () => {
     : 'kimmi.dev';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : 'Next.js Blog Theme';
+    : 'Welcome to Kimmi\'s Website';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : 'All rights reserved.';

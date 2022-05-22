@@ -2,12 +2,14 @@ import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
 import Layout, { GradientBackground } from '../components/includes/Layout';
+import Hero from '../components/landing/Hero';
 import ArrowIcon from '../components/includes/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 
 export default function Index({ posts, globalData }) {
   return (
     <Layout globalData={globalData}>
+        <Hero />
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
         </h1>

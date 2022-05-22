@@ -40,7 +40,7 @@
   height: 600px;
   max-width: 900px;
   width: 55vw;
-  width: 100%;
+  width: 70%;
   filter: blur(44px);
   z-index: -1;
 }

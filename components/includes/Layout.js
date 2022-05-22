@@ -58,7 +58,7 @@ export default function Layout({ children, globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />     
       <Header name={globalData.name} />
       <div className="pb-24 pt-12 overflow-hidden"> 
-        <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
+        <div className="flex flex-col items-center lg:px-12 px-8 w-full mx-auto">
           <main className="w-full">
             {children}
           </main>
@@ -67,11 +67,11 @@ export default function Layout({ children, globalData }) {
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
         variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
+        className="fixed w-screen lg:w1/2 top-20 opacity-40 dark:opacity-60"
       />
       <GradientBackground
         variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
+        className="absolute w-screen lg:w-1/2 bottom-0 opacity-20 dark:opacity-10"
       />
     </section>
   );
