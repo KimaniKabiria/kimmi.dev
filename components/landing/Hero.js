@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect, useState } from "react"
 import Image from 'next/image'
 import Typewriter from 'typewriter-effect'
 import { motion, useAnimation } from "framer-motion"
@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer"
 import { FaChevronDown} from 'react-icons/fa'
 
 import HeroImg from "../../assets/images/hero.svg"
+import AnimatedText from "../includes/AnimatedText"
 
 function FadeInWhenVisible({ children }) {
     const controls = useAnimation();
@@ -34,11 +35,33 @@ function FadeInWhenVisible({ children }) {
 }
 
 export default function Hero(){
+
+    const [replay, setReplay] = useState(true);
+  // Placeholder text data, as if from API
+  const placeholderText = [
+    { type: "heading1", text: "Hello," }
+  ];
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025
+      }
+    }
+  };
+
+  // Quick and dirt for the example
+  const handleReplay = () => {
+    setReplay(!replay);
+    setTimeout(() => {
+      setReplay(true);
+    }, 300);
+  };
     return(
         <FadeInWhenVisible>
             <div className="flex flex-col lg:flex-row lg:px-12 pb-20">
                 <div className="flex lg:w1/2">
-                    <div className="lg:px-12">
+                    <div className="lg:px-20">
                         <Image
                         className=""
                         src={HeroImg}
@@ -48,7 +71,24 @@ export default function Hero(){
                 </div>
                 <div className="flex flex-col lg:w-1/2 lg:py-20 py-8 text-center lg:text-left">
                     <div className="w-full h-44 lg:h-64">
-                        <h1 className="lg:text-5xl text-4xl font-bold">Hello,</h1>
+                        
+                    <h1 className="lg:text-5xl text-4xl font-bold">
+                        <motion.div
+                        className="App"
+                        initial="hidden"
+                        // animate="visible"
+                        animate={replay ? "visible" : "hidden"}
+                        variants={container}
+                        whileHover={handleReplay}
+                        >
+                        <div className="container">
+                            {placeholderText.map((item, index) => {
+                            return <AnimatedText {...item} key={index} />;
+                            })}
+                        </div>
+                        </motion.div>
+                        </h1>
+                        {/* <h1 className="lg:text-5xl text-4xl font-bold">Hello,</h1> */}
                         <h1 className="lg:text-4xl text-2xl font-semibold mt-4">
                             <Typewriter			
                                 options={{
@@ -68,7 +108,7 @@ export default function Hero(){
                             />
                         </h1>
                     </div>
-                    <motion.div 
+                    {/* <motion.div 
                         whileHover={{ 
                         scale: 1.10, 
                         }} 
@@ -84,7 +124,7 @@ export default function Hero(){
                                     <FaChevronDown className="w-12 text-center h-6" size='fa-2x' />
                                 </div>
                         </button>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>
         </FadeInWhenVisible>
