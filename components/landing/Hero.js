@@ -61,6 +61,9 @@ export default function Hero(){
         <FadeInWhenVisible>
             <div className="flex flex-col lg:flex-row lg:px-12 pb-20">
                 <div className="flex lg:w1/2">
+                <motion.div
+                whileHover={{ scale: 1.05 }}
+                >
                     <div className="lg:px-20">
                         <Image
                         className=""
@@ -68,25 +71,26 @@ export default function Hero(){
                         alt="HeroImg"
                         />
                     </div>
+                </motion.div>
                 </div>
                 <div className="flex flex-col lg:w-1/2 lg:py-20 py-8 text-center lg:text-left">
                     <div className="w-full h-44 lg:h-64">
                         
-                    <h1 className="lg:text-5xl text-4xl font-bold">
-                        <motion.div
-                        className="App"
-                        initial="hidden"
-                        // animate="visible"
-                        animate={replay ? "visible" : "hidden"}
-                        variants={container}
-                        whileHover={handleReplay}
-                        >
-                        <div className="container">
-                            {placeholderText.map((item, index) => {
-                            return <AnimatedText {...item} key={index} />;
-                            })}
-                        </div>
-                        </motion.div>
+                        <h1 className="lg:text-5xl text-4xl font-bold">
+                            <motion.div
+                            className="App"
+                            initial="hidden"
+                            // animate="visible"
+                            animate={replay ? "visible" : "hidden"}
+                            variants={container}
+                            whileHover={handleReplay}
+                            >
+                            <div className="flex dark:text-white">
+                                {placeholderText.map((item, index) => {
+                                return <AnimatedText {...item} key={index} />;
+                                })}
+                            </div>
+                            </motion.div>
                         </h1>
                         {/* <h1 className="lg:text-5xl text-4xl font-bold">Hello,</h1> */}
                         <h1 className="lg:text-4xl text-2xl font-semibold mt-4">

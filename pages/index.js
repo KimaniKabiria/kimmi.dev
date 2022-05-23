@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer"
 
 import Layout, { GradientBackground } from '../components/includes/Layout';
 import Hero from '../components/landing/Hero';
+import Services from "../components/landing/Services";
 import ArrowIcon from '../components/includes/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 
@@ -72,12 +73,15 @@ export default function Index({ posts, globalData }) {
               <motion.div
                 whileHover={{ scale: 1.05 }}
               >
-                <p className='text-center text-kimmi-teal text-2xl font-bold mt-8'>
-                  I will help you bring your ides to life!
+                <p className='text-center uppercase text-kimmi-teal text-2xl font-bold mt-8 px-8'>
+                  I will help you bring your ideas to life!
                 </p>
               </motion.div>
         </div>
         </FadeInWhenVisible>
+
+        <Services />
+
         <ul className="w-full">
           {posts.map((post) => (
             <li
