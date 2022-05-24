@@ -34,6 +34,17 @@ function FadeInWhenVisible({ children }) {
     );
 }
 
+const Emoji = props => (
+    <span
+        className="emoji mr-4"
+        role="img"
+        aria-label={props.label ? props.label : ""}
+        aria-hidden={props.label ? "false" : "true"}
+    >
+        {props.symbol}
+    </span>
+);
+
 export default function Hero(){
 
     const [replay, setReplay] = useState(true);
@@ -60,11 +71,11 @@ export default function Hero(){
     return(
         <FadeInWhenVisible>
             <div className="flex flex-col lg:flex-row lg:px-12 pb-20">
-                <div className="flex lg:w1/2">
+                <div className="flex lg:w1/3">
                 <motion.div
                 whileHover={{ scale: 1.05 }}
                 >
-                    <div className="lg:px-20">
+                    <div className="lg:w-xl lg:my-12 lg:px-12">
                         <Image
                         className=""
                         src={HeroImg}
@@ -73,18 +84,18 @@ export default function Hero(){
                     </div>
                 </motion.div>
                 </div>
-                <div className="flex flex-col lg:w-1/2 lg:py-20 py-8 text-center lg:text-left">
-                    <div className="w-full h-44 lg:h-64">
-                        
-                        <h1 className="lg:text-5xl text-4xl font-bold">
+                <div className="flex flex-col lg:w-5/6 py-8 text-center lg:text-left">
+                    <div className="w-full">
+                        <h1 className="lg:text-3xl lg:mx-0 mx-12 text-xl font-bold">
                             <motion.div
-                            className="App"
+                            className="flex flex-row"
                             initial="hidden"
                             // animate="visible"
                             animate={replay ? "visible" : "hidden"}
                             variants={container}
                             whileHover={handleReplay}
                             >
+                            <Emoji symbol="👋" label="sheep"/>
                             <div className="flex dark:text-white">
                                 {placeholderText.map((item, index) => {
                                 return <AnimatedText {...item} key={index} />;
@@ -93,7 +104,7 @@ export default function Hero(){
                             </motion.div>
                         </h1>
                         {/* <h1 className="lg:text-5xl text-4xl font-bold">Hello,</h1> */}
-                        <h1 className="lg:text-4xl text-2xl font-semibold mt-4">
+                        <h1 className="lg:text-6xl text-4xl font-semibold mt-4">
                             <Typewriter			
                                 options={{
                                     loop: true,

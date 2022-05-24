@@ -94,7 +94,7 @@ export default function Services(){
 
     return(
        
-          <div className="mx-auto lg:p-12 text-center">
+          <div className="mx-auto lg:p-12 text-center text-base">
             <div className="lg:grid lg:grid-cols-3 lg:gap-4">
               <motion.div
                 whileHover={{ scale: 1.015 }}
@@ -152,10 +152,10 @@ export default function Services(){
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                            <div className="inline-block w-full max-w-5xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-kimmi-teal/20 shadow-xl rounded-2xl">
+                            <div className="inline-block w-full max-w-5xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-kimmi-teal/20 shadow-2xl rounded-2xl">
                                 <div>
                                     <div className="flex flex-row items-start w-full">
-                                        <Dialog.Title as="h3" className="w-full p-2">
+                                        <Dialog.Title as="h3" className="w-full p-2 lg:px-8">
                                             <h1 className="text-3xl font-black underline p-2">DESIGN</h1>
                                         </Dialog.Title>
                                         <button className='p-2 focus:outline-none' onClick={closeModal}>
@@ -177,14 +177,14 @@ export default function Services(){
                                             hidden: { opacity: 0, scale: 0.8 }
                                         }}
                                         >
-                                            <div className="lg:px-12 py-6">
+                                            <div className="lg:px-20 py-6">
                                                 <Image
                                                 className=""
                                                 src={Design}
                                                 alt="Design"
                                                 />
                                             </div>
-                                            <p className="font-medium">
+                                            <p className="font-medium text-base">
                                             I work with certain design tools to create high-fidelity designs and prototypes. I design accessible and usable products which aid business growth.
                                             </p>
                                         </motion.div>
@@ -218,7 +218,7 @@ export default function Services(){
                                             >
                                                 <h3 className="font-bold pb-2 border-b-2">My Design Tools</h3>
                                             </motion.div>
-                                            <div className="App">
+                                            <div className="text-base">
                                                 <motion.ul variants={container} initial="hidden" animate="show">
                                                 <motion.li variants={item} className="flex flex-row items-center">
                                                     <CgFigma className="w-12 h-12 p-2" size='fa-2x' /> 
