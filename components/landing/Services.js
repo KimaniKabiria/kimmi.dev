@@ -7,11 +7,13 @@ import { useInView } from "react-intersection-observer"
 import { MdDesignServices} from 'react-icons/md'
 import { XIcon } from "@heroicons/react/outline"
 import { CgFigma } from "react-icons/cg";
-import { SiAdobexd, SiAdobeillustrator, SiAdobephotoshop, SiReact, SiJavascript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiFlutter } from "react-icons/si";
+import { SiAdobexd, SiAdobeillustrator, SiAdobephotoshop, SiReact, SiJavascript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiFlutter, SiPhp, SiPython, SiKotlin, SiSwift, SiMysql, SiPostgresql, SiLaravel, SiDjango } from "react-icons/si";
 import { HiOutlineDesktopComputer } from "react-icons/hi"
+import{ BsCodeSquare } from "react-icons/bs"
 
 import Design from "../../assets/images/design.svg"
 import FrontEnd from "../../assets/images/front-end.svg"
+import Code from "../../assets/images/about.svg"
 
 
 function FadeInWhenVisible({ children }) {
@@ -438,10 +440,10 @@ export default function Services(){
               <div>
                 <div className="p-6 max-w-sm rounded-xl backdrop-blur-lg bg-white/10 dark:bg-black/30 hover:bg-kimmi-teal/30 dark:hover:bg-kimmi-teal/20 transition border border-kimmi-teal dark:border-white border-opacity-10 dark:border-opacity-10 lg:transform lg:skew-y-6 lg:hover:transform-none">
                   <div className="flex mx-auto w-full justify-center items-center">  
-                    <MdDesignServices className="w-24 text-center h-24 p-2" size='fa-2x' />
+                    <BsCodeSquare className="w-24 text-center h-24 p-2" size='fa-2x' />
                   </div>
-                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Design</h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Back-End</h5>
+                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I am passionate about building excellent things that improves the lives of everyone.</p>
                   <button 
                         className="flex rounded-md items-center justify-end w-full py-2 text-base text-center ml-8 -mb-4"
                         type="button"
@@ -492,7 +494,7 @@ export default function Services(){
                                 <div>
                                     <div className="flex flex-row items-start w-full">
                                         <Dialog.Title as="h3" className="w-full p-2">
-                                            <h1 className="text-3xl font-black underline p-2">DESIGN</h1>
+                                            <h1 className="text-3xl font-black underline p-4">BACK-END</h1>
                                         </Dialog.Title>
                                         <button className='p-2 focus:outline-none' onClick={closeModal3}>
                                             <XIcon className="block h-6 w-6"/>
@@ -513,15 +515,14 @@ export default function Services(){
                                             hidden: { opacity: 0, scale: 0.8 }
                                         }}
                                         >
-                                            <div className="lg:px-12 py-6">
+                                            <div className="lg:px-20 py-6">
                                                 <Image
                                                 className=""
-                                                src={Design}
-                                                alt="Design"
+                                                src={Code}
+                                                alt="Code"
                                                 />
                                             </div>
-                                            <p className="font-medium">
-                                            I work with certain design tools to create high-fidelity designs and prototypes. I design accessible and usable products which aid business growth.
+                                            <p className="font-medium text-base">I specialize in creating software for clients ranging from individuals and small-businesses all the way to large enterprise corporations. What would you do if you had a software expert available at your fingertips?
                                             </p>
                                         </motion.div>
                                     </div>
@@ -537,8 +538,8 @@ export default function Services(){
                                         }}
                                         >
                                             <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">Things I enjoy designing:</h3>
-                                                <p className="p-2 font-black">UI - UX - Web - Mobile - Apps - Logos</p>
+                                                <h3 className="font-bold pb-2 border-b-2">Things I enjoy building:</h3>
+                                                <p className="p-2 font-black">Full Stack applications - Websites & Web apps - Mobile Apps - APIs</p>
                                             </div>
                                         </motion.div>
                                         <div className="p-3">
@@ -552,25 +553,43 @@ export default function Services(){
                                                 hidden: { opacity: 0, scale: 0.8 }
                                             }}
                                             >
-                                                <h3 className="font-bold pb-2 border-b-2">My Design Tools</h3>
+                                                <h3 className="font-bold pb-2 border-b-2">My ToolBox</h3>
                                             </motion.div>
-                                            <div className="App">
-                                                <motion.ul variants={container} initial="hidden" animate="show">
+                                            <div className="flex flex-col lg:flex-row">
+                                                <motion.ul variants={container} initial="hidden" animate="show" className="mx-auto">
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <CgFigma className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Figma
+                                                    <SiPhp className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    PHP
                                                 </motion.li>
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <SiAdobexd className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Adobe XD
+                                                    <SiPython className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Python
                                                 </motion.li>
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <SiAdobeillustrator className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Adobe Illustrator
+                                                    <SiKotlin className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Kotlin
                                                 </motion.li>
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <SiAdobephotoshop className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Adobe Photoshop
+                                                    <SiSwift className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Swift
+                                                </motion.li>
+                                                </motion.ul>
+                                                <motion.ul variants={container} initial="hidden" animate="show" className="mx-auto">
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiMysql className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    MySQL
+                                                </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiPostgresql className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Postgre Sql
+                                                </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiLaravel className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Laravel
+                                                </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiDjango className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Django
                                                 </motion.li>
                                                 </motion.ul>
                                             </div>
