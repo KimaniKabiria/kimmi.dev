@@ -112,14 +112,13 @@ export default function Header() {
    };
  }, []);
  const menuItems = [
-   { title: "Home", url: "https://themeptation.net" },
-   { title: "Products", url: "https://themeptation.net" },
-   { title: "Contact", url: "https://themeptation.net" }
+   { title: "About Me", url: "#" },
+   { title: "My Works", url: "#" },
  ];
 return (
  <header className={`w-full sticky flex z-40 top-0 trasition ease-in-out duration-500 ${animateHeader && "lg:px-8"}`}>
       {/* <div className="mx-auto "> */}
-        <div className={`flex w-full py-6 lg:px-12 rounded-2xl justify-between items-start lg:items-center backdrop-filter backdrop-blur-lg ${animateHeader && "py-2 bg-white/10 dark:bg-black/10"} mx-auto px-8 trasition ease-in-out duration-500`}>
+        <div className={`flex w-full py-6 lg:px-12 rounded-2xl justify-between items-start lg:items-center backdrop-filter backdrop-blur-lg ${animateHeader && "py-2 bg-white/10 dark:bg-black/10 border-2 border-kimmi-teal/10 mt-2"} mx-auto px-8 trasition ease-in-out duration-500`}>
                 
           <div className="flex h-12 lg:hidden">
               <button
@@ -139,47 +138,50 @@ return (
 
           <div className="flex flex-col lg:flex-row mx-auto w-full items-center lg:px-4">          
             <div className="inline-flex lg:flex justify-start mx-auto">
-              <a href="#" className="text-xl font-bold tracking-tighter text-kimmi-teal pr-8">
-                <div className={`flex-shrink w-48 ${animateHeader && "w-40"} flex`}>
+              <div className={`flex-shrink w-48 ${animateHeader && "w-40"} flex`}>
+                <Link href="\" passHref>
                   <div className="dark:hidden block">
-                    <Image
-                      className=""
-                      src={LogoSVG}
-                      alt="Logo"
-                      width= {460}
-                      height={100}
-                    />
-                  </div>
-                  <div className="hidden dark:block">
-                    <Image
-                      className=""
-                      src={LogoWhiteSVG}
-                      alt="Logo"
-                      width= {460}
-                      height={100}
-                    />
-                  </div>
-                  </div>
-              </a>
+                      <Image
+                        className=""
+                        src={LogoSVG}
+                        alt="Logo"
+                        width= {460}
+                        height={100}
+                      />
+                    </div>
+                  </Link>
+                <Link href="\" passHref>
+                    <div className="hidden dark:block">
+                      <Image
+                        className=""
+                        src={LogoWhiteSVG}
+                        alt="Logo"
+                        width= {460}
+                        height={100}
+                      />
+                    </div>
+                  </Link>
+                </div>
             </div>
 
             <div className={`${isExpanded ? `block` : `hidden`} w-full flex flex-grow lg:flex lg:items-center lg:w-auto mx-auto`}>
-              <div className="flex lg:justify-start mx-auto">
+              <div className="flex w-full lg:justify-end mx-auto">
+                
+              </div>
+              <div className="flex w-full mt-8 flex-col lg:flex-row lg:mt-0 lg:items-center lg:justify-end mx-auto  text-kimmi-teal">
                 <nav>
                   <ul className="flex items-center justify-center">
-                    {/* {menuItems?.map((item) => (
+                    {menuItems?.map((item) => (
                       <li key={item?.title}>
                         <Link href={item?.url}>
-                          <a className="px-2 lg:px-6 py-6 text-md border-b-2 border-transparent hover:border-indigo-400 leading-[22px] md:px-3 text-gray-400 hover:text-indigo-500">
+                          <a className="px-2 text-base font-medium border-b-2 border-transparent hover:border-kimmi-teal hover:text-kimmi-teal">
                             {item?.title}
                           </a>
                         </Link>
                       </li>
-                    ))} */}
+                    ))}
                   </ul>
                 </nav>
-              </div>
-              <div className="flex w-full mt-8 flex-col lg:flex-row lg:mt-0 lg:items-center lg:justify-end mx-auto  text-kimmi-teal">
                 <div>
                   {/* <ContactDialog /> */}
                 </div>
