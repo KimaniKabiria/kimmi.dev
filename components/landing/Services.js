@@ -7,9 +7,11 @@ import { useInView } from "react-intersection-observer"
 import { MdDesignServices} from 'react-icons/md'
 import { XIcon } from "@heroicons/react/outline"
 import { CgFigma } from "react-icons/cg";
-import { SiAdobexd, SiAdobeillustrator, SiAdobephotoshop } from "react-icons/si";
+import { SiAdobexd, SiAdobeillustrator, SiAdobephotoshop, SiReact, SiJavascript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiFlutter } from "react-icons/si";
+import { HiOutlineDesktopComputer } from "react-icons/hi"
 
 import Design from "../../assets/images/design.svg"
+import FrontEnd from "../../assets/images/front-end.svg"
 
 
 function FadeInWhenVisible({ children }) {
@@ -257,10 +259,10 @@ export default function Services(){
               <div>
                 <div className="p-6 max-w-sm rounded-xl backdrop-blur-lg bg-white/10 dark:bg-black/30 hover:bg-kimmi-teal/30 dark:hover:bg-kimmi-teal/20 transition border border-kimmi-teal dark:border-white border-opacity-10 dark:border-opacity-10">
                   <div className="flex mx-auto w-full justify-center items-center">  
-                    <MdDesignServices className="w-24 text-center h-24 p-2" size='fa-2x' />
+                    <HiOutlineDesktopComputer className="w-24 text-center h-24 p-2" size='fa-2x' />
                   </div>
-                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Development</h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Front-End</h5>
+                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
                   <button 
                         className="flex rounded-md items-center justify-end w-full py-2 text-base text-center ml-8 -mb-4"
                         type="button"
@@ -310,8 +312,8 @@ export default function Services(){
                             <div className="inline-block w-full max-w-5xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-kimmi-teal/20 shadow-xl rounded-2xl">
                                 <div>
                                     <div className="flex flex-row items-start w-full">
-                                        <Dialog.Title as="h3" className="w-full p-2">
-                                            <h1 className="text-3xl font-black underline p-2">DEVELOP</h1>
+                                        <Dialog.Title as="h3" className="w-full p-4">
+                                            <h1 className="text-3xl font-black underline p-2">FRONT-END</h1>
                                         </Dialog.Title>
                                         <button className='p-2 focus:outline-none' onClick={closeModal2}>
                                             <XIcon className="block h-6 w-6"/>
@@ -332,15 +334,15 @@ export default function Services(){
                                             hidden: { opacity: 0, scale: 0.8 }
                                         }}
                                         >
-                                            <div className="lg:px-12 py-6">
+                                            <div className="lg:px-20 py-6">
                                                 <Image
                                                 className=""
-                                                src={Design}
-                                                alt="Design"
+                                                src={FrontEnd}
+                                                alt="FrontEnd"
                                                 />
                                             </div>
-                                            <p className="font-medium">
-                                            I work with certain design tools to create high-fidelity designs and prototypes. I design accessible and usable products which aid business growth.
+                                            <p className="font-medium text-base">
+                                            I use various web technologies to develop attractive websites which converts visitors to customers. I develop creative and responsive website layouts.
                                             </p>
                                         </motion.div>
                                     </div>
@@ -356,8 +358,8 @@ export default function Services(){
                                         }}
                                         >
                                             <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">Things I enjoy designing:</h3>
-                                                <p className="p-2 font-black">UI - UX - Web - Mobile - Apps - Logos</p>
+                                                <h3 className="font-bold pb-2 border-b-2">Languages I speak:</h3>
+                                                <p className="p-2 font-black">HTML - JavaScript - JSX - CSS - Sass - Less</p>
                                             </div>
                                         </motion.div>
                                         <div className="p-3">
@@ -373,24 +375,50 @@ export default function Services(){
                                             >
                                                 <h3 className="font-bold pb-2 border-b-2">My Design Tools</h3>
                                             </motion.div>
-                                            <div className="App">
-                                                <motion.ul variants={container} initial="hidden" animate="show">
+                                            <div className="flex flex-col lg:flex-row">
+                                                <motion.ul variants={container} initial="hidden" animate="show" className="mx-auto">
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <CgFigma className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Figma
+                                                    <SiReact className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    React
                                                 </motion.li>
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <SiAdobexd className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Adobe XD
+                                                    <SiJavascript className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    JavaScript
                                                 </motion.li>
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <SiAdobeillustrator className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Adobe Illustrator
+                                                    <SiTailwindcss className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Tailwind
                                                 </motion.li>
                                                 <motion.li variants={item} className="flex flex-row items-center">
-                                                    <SiAdobephotoshop className="w-12 h-12 p-2" size='fa-2x' /> 
-                                                    Adobe Photoshop
+                                                    <SiVuedotjs className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Vue JS
                                                 </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiNextdotjs className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Next.JS
+                                                </motion.li>
+                                                </motion.ul>
+                                                <motion.ul variants={container} initial="hidden" animate="show" className="mx-auto">
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiFlutter className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Flutter
+                                                </motion.li>
+                                                {/* <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiJavascript className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    JavaScript
+                                                </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiTailwindcss className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Tailwind
+                                                </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiVuedotjs className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Vue JS
+                                                </motion.li>
+                                                <motion.li variants={item} className="flex flex-row items-center">
+                                                    <SiNextdotjs className="w-12 h-12 p-2" size='fa-2x' /> 
+                                                    Next.JS
+                                                </motion.li> */}
                                                 </motion.ul>
                                             </div>
                                         </div>
