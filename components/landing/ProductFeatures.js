@@ -38,8 +38,8 @@ function FadeInWhenVisible({ children }) {
 export default function ProductFeatures(){
     return(
         <FadeInWhenVisible>
-            <div className="flex flex-col items-center justify-center py-12 mx-8 md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0">
-                <div className="w-full py-4 text-center">
+            <div className="flex flex-col items-center justify-center py-12 lg:mx-8 md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0">
+                <div className="w-full py-4 px-4 text-center">
                     <h1 className="font-bold text-2xl lg:text-5xl">
                         <Typewriter			
                             options={{
@@ -61,7 +61,7 @@ export default function ProductFeatures(){
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                     >
-                        <div className="pt-12 px-6 flex flex-row w-full">
+                        <div className="pt-12 px-6 flex flex-col lg:flex-row w-full">
                             <div className="flex w-16 justify-end items-center">  
                                 <GiMagnifyingGlass className="w-16 h-16 py-2 pr-4 text-right" size='fa-2x' />
                             </div>
@@ -75,7 +75,7 @@ export default function ProductFeatures(){
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                     >
-                        <div className="pt-12 px-6 flex flex-row w-full">
+                        <div className="pt-12 px-6 flex flex-col lg:flex-row w-full">
                             <div className="flex w-16 justify-end items-center">  
                                 <RiFlowChart className="w-16 h-16 py-2 pr-4 text-right" size='fa-2x' />
                             </div>
@@ -89,7 +89,7 @@ export default function ProductFeatures(){
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                     >
-                        <div className="pt-12 px-6 flex flex-row w-full">
+                        <div className="pt-12 px-6 flex flex-col lg:flex-row w-full">
                             <div className="flex w-16 justify-end items-center">  
                                 <MdOutlineDesignServices className="w-16 h-16 py-2 pr-4 text-right" size='fa-2x' />
                             </div>
@@ -103,7 +103,7 @@ export default function ProductFeatures(){
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                     >
-                        <div className="pt-12 px-6 flex flex-row w-full">
+                        <div className="pt-12 px-6 flex flex-col lg:flex-row w-full">
                             <div className="flex w-16 justify-end items-center">  
                                 <CgWebsite className="w-16 h-16 py-2 pr-4 text-right" size='fa-2x' />
                             </div>
@@ -117,7 +117,7 @@ export default function ProductFeatures(){
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                     >
-                        <div className="pt-12 px-6 flex flex-row w-full">
+                        <div className="pt-12 px-6 flex flex-col lg:flex-row w-full">
                             <div className="flex w-16 justify-end items-center">  
                                 <GiDrippingTube className="w-16 h-16 py-2 pr-4 text-right" size='fa-2x' />
                             </div>
@@ -132,7 +132,7 @@ export default function ProductFeatures(){
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                     >
-                        <div className="pt-12 px-6 flex flex-row w-full">
+                        <div className="pt-12 px-6 flex flex-col lg:flex-row w-full">
                             <div className="flex w-16 justify-end items-center">  
                                 <MdOutlineSupportAgent className="w-16 h-16 py-2 pr-4 text-right" size='fa-2x' />
                             </div>

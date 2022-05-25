@@ -70,7 +70,7 @@ export default function Hero(){
     };
     return(
         <FadeInWhenVisible>
-            <div className="flex flex-col lg:flex-row lg:px-12 pb-20">
+            <div className="flex flex-col lg:flex-row -mt-8 lg:mt-0 lg:px-12 pb-20">
                 <div className="flex lg:w1/3">
                 <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -104,7 +104,7 @@ export default function Hero(){
                             </motion.div>
                         </h1>
                         {/* <h1 className="lg:text-5xl text-4xl font-bold">Hello,</h1> */}
-                        <h1 className="lg:text-6xl text-4xl font-semibold mt-4">
+                        <h1 className="lg:text-6xl h-48 text-4xl font-semibold mt-4">
                             <Typewriter			
                                 options={{
                                     loop: true,

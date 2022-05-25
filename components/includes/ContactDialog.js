@@ -43,12 +43,11 @@ function ContactDialog() {
     <>
       
       <button 
-            className="group flex rounded-md items-center w-full lg:px-4 py-2 text-base"
+            className="group flex rounded-xl items-center lg:px-12 py-2 text-base bg-kimmi-teal"
             type="button"
             onClick={openModal}
         >
-            <BriefcaseIcon className="flex mr-2 h-6 w-6" aria-hidden="true" />
-            <p className="flex lg:block my-2">Let's Build</p>                        
+            <p className="flex lg:block my-2 text-white font-bold">Let's Build</p>                        
         </button>  
     
             <Transition appear show={isOpen} as={Fragment}>
@@ -86,7 +85,7 @@ function ContactDialog() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-kimmi-teal/75  backdrop-filter backdrop-blur-lg backdrop-saturate-150 shadow-xl rounded-2xl">
+                <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-kimmi-teal/40  backdrop-filter backdrop-blur-lg backdrop-saturate-150 shadow-xl rounded-2xl">
                     <div>
                         <div className="flex flex-row items-start w-full">
                             <Dialog.Title as="h3" className="w-full p-2 text-2xl font-bold leading-6 text-center">
@@ -116,7 +115,7 @@ function ContactDialog() {
                             <label className="block uppercase tracking-wide text-xs font-bold mb-2">
                                 E-mail
                             </label>
-                            <input className="appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight" id="email" type="email" />
+                            <input className="appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight" id="email" type="email" placeholder="jane@example.com" />
                             </div>
                         </div>
                         <div className="flex flex-wrap -mx-3 mb-6">
@@ -124,16 +123,16 @@ function ContactDialog() {
                             <label className="block uppercase tracking-wide text-xs font-bold mb-2">
                                 Message
                             </label>
-                            <textarea className="no-resize resize-y appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight h-12 lg:h-24" id="message" onChange={handleChange}></textarea>
+                            <textarea className="no-resize resize-y appearance-none block w-full rounded py-3 px-4 mb-3 leading-tight h-12 lg:h-24" id="message" placeholder="Send me a quick message" onChange={handleChange}></textarea>
                             </div>
                         </div>
                         <div className="block items-center">
                             <div className="text-center">
-                                <button className="shadow bg-gradient-to-r from-taran-blue to-taran-orange text-white font-bold py-2 px-8 rounded lg:mx-4" onClick={closeModal} type="submit">
+                                <button className="shadow bg-gradient-to-r from-black to-kimmi-teal text-white font-bold py-2 px-8 rounded lg:mx-4" onClick={closeModal} type="submit">
                                     Send
                                 </button>
                                 
-                                <button className="shadow bg-transparent text-taran-orange font-bold py-2 px-8 rounded lg:mx-4" onClick={closeModal} type="button">
+                                <button className="shadow bg-black/20 font-bold py-2 px-8 rounded lg:mx-4" onClick={closeModal} type="button">
                                     Cancel
                                 </button>
                             </div>
