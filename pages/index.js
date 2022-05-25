@@ -8,6 +8,7 @@ import Layout, { GradientBackground } from '../components/includes/Layout';
 import Hero from '../components/landing/Hero';
 import AboutSection from "../components/landing/AboutSection";
 import Services from "../components/landing/Services";
+import WorkProcess from "../components/landing/WorkProcess";
 import ArrowIcon from '../components/includes/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 
@@ -84,6 +85,8 @@ export default function Index({ posts, globalData }) {
         </FadeInWhenVisible> */}
 
         <Services />
+
+        <WorkProcess />
 
         <ul className="w-full">
           {posts.map((post) => (
