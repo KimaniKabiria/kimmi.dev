@@ -43,7 +43,7 @@ function ContactDialog() {
     <>
       
       <button 
-            className="group flex rounded-xl items-center lg:px-12 py-2 text-base bg-kimmi-teal"
+            className="group flex rounded-xl items-center px-12 py-2 text-base bg-kimmi-teal"
             type="button"
             onClick={openModal}
         >

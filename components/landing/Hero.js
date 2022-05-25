@@ -8,6 +8,8 @@ import { FaChevronDown} from 'react-icons/fa'
 import HeroImg from "../../assets/images/hero.svg"
 import AnimatedText from "../includes/AnimatedText"
 
+import ContactDialog from "../includes/ContactDialog"
+
 function FadeInWhenVisible({ children }) {
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -104,7 +106,7 @@ export default function Hero(){
                             </motion.div>
                         </h1>
                         {/* <h1 className="lg:text-5xl text-4xl font-bold">Hello,</h1> */}
-                        <h1 className="lg:text-6xl h-48 text-4xl font-semibold mt-4">
+                        <h1 className="lg:text-6xl h-64 lg:h-72 text-4xl font-semibold mt-4">
                             <Typewriter			
                                 options={{
                                     loop: true,
@@ -123,7 +125,7 @@ export default function Hero(){
                             />
                         </h1>
                     </div>
-                    {/* <motion.div 
+                    <motion.div 
                         whileHover={{ 
                         scale: 1.10, 
                         }} 
@@ -131,15 +133,12 @@ export default function Hero(){
                             ease: 'easeOut',
                             duration: 0.35,
                         }}
-                        className="flex justify-center items-center"
+                        className=""
                     > 
-                        <button className="mx-auto my-6 rounded-xl py-3 px-12 font-extrabold uppercase text-gray-700 dark:text-white bg-gradient-to-r from-blue-400 to-emerald-400 bg-opacity-50 hover:bg-gradient-to-r hover:from-cyan-200 hover:to-cyan-400 hover:border hover:border-white">
-                                <div className="flex flex-row text-center items-center JU]">
-                                    <p className="w-full">START HERE</p>                               
-                                    <FaChevronDown className="w-12 text-center h-6" size='fa-2x' />
-                                </div>
-                        </button>
-                    </motion.div> */}
+                    <div className="flex justify-center lg:justify-end lg:mt-12">
+                        <ContactDialog />
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </FadeInWhenVisible>
