@@ -12,7 +12,6 @@ import Link from 'next/link';
 import ArrowIcon from '../../components/includes/ArrowIcon';
 import CustomLink from '../../components/includes/CustomLink';
 import Footer from '../../components/includes/Footer';
-import Header from '../../components/includes/Header';
 import Layout, { GradientBackground } from '../../components/includes/Layout';
 import SEO from '../../components/includes/SEO';
 
@@ -36,12 +35,11 @@ export default function PostPage({
   globalData,
 }) {
   return (
-    <Layout>
+    <Layout globalData={globalData}>
       <SEO
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
       />
-      <Header name={globalData.name} />
       <article className="px-6 md:px-0">
         <header>
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">

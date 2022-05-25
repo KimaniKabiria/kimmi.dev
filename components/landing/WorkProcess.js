@@ -38,11 +38,11 @@ export default function WorkProcess(){
     return(
         <FadeInWhenVisible>
             <div className="flex flex-col items-center justify-center py-12">
-                <div className="w-full py-4 text-center border-b-2 border-gray-900/10">
+                <div className="w-full py-4 text-center">
                     <h1 className="font-semibold text-2xl"> How I Work!</h1>
                     <p className="text-base"> my process to build awesone things</p>
                 </div>
-                <div className="w-full lg:grid grid-cols-5 border-b-2 border-gray-900/10">
+                <div className="w-full lg:grid grid-cols-5">
                     
                     <motion.div
                         whileHover={{ scale: 0.95 }}

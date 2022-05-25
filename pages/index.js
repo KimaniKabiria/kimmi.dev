@@ -9,6 +9,7 @@ import Hero from '../components/landing/Hero';
 import AboutSection from "../components/landing/AboutSection";
 import Services from "../components/landing/Services";
 import WorkProcess from "../components/landing/WorkProcess";
+import ProductFeatures from "../components/landing/ProductFeatures";
 import ArrowIcon from '../components/includes/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 
@@ -87,8 +88,10 @@ export default function Index({ posts, globalData }) {
         <Services />
 
         <WorkProcess />
+        
+        <ProductFeatures />
 
-        <ul className="w-full">
+        {/* <ul className="w-full">
           {posts.map((post) => (
             <li
               key={post.filePath}
@@ -115,7 +118,7 @@ export default function Index({ posts, globalData }) {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
     </Layout>
   );
 }
