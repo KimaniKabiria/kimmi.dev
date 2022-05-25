@@ -72,7 +72,7 @@ export default function Hero(){
     };
     return(
         <FadeInWhenVisible>
-            <div className="flex flex-col lg:flex-row -mt-8 lg:mt-0 lg:px-12 pb-20">
+            <div className="flex flex-col lg:flex-row -mt-8 lg:mt-0 lg:px-12 2xl:px-32 2xl:mt-12 pb-20">
                 <div className="flex lg:w1/3">
                 <motion.div
                 whileHover={{ scale: 1.05 }}
