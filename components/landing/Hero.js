@@ -48,26 +48,26 @@ const Emoji = props => (
 export default function Hero(){
 
     const [replay, setReplay] = useState(true);
-  // Placeholder text data, as if from API
-  const placeholderText = [
-    { type: "heading1", text: "Hello," }
-  ];
+    // Placeholder text data, as if from API
+    const placeholderText = [
+        { type: "heading1", text: "Hello," }
+    ];
 
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
+    const container = {
+        visible: {
+        transition: {
+            staggerChildren: 0.025
+        }
+        }
+    };
 
-  // Quick and dirt for the example
-  const handleReplay = () => {
-    setReplay(!replay);
-    setTimeout(() => {
-      setReplay(true);
-    }, 300);
-  };
+    // Quick and dirt for the example
+    const handleReplay = () => {
+        setReplay(!replay);
+        setTimeout(() => {
+        setReplay(true);
+        }, 300);
+    };
     return(
         <FadeInWhenVisible>
             <div className="flex flex-col lg:flex-row lg:px-12 pb-20">

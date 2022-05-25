@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer"
 
 import Layout, { GradientBackground } from '../components/includes/Layout';
 import Hero from '../components/landing/Hero';
+import AboutSection from "../components/landing/AboutSection";
 import Services from "../components/landing/Services";
 import ArrowIcon from '../components/includes/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
@@ -41,9 +42,11 @@ export default function Index({ posts, globalData }) {
   return (
     <Layout globalData={globalData}>
         <Hero />
+
+        <AboutSection />
         
         {/* About Me Section */}
-        <FadeInWhenVisible>
+        {/* <FadeInWhenVisible>
           <div className='py-20 lg:-mx-20 -mx-8 my-12 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10'>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -78,7 +81,7 @@ export default function Index({ posts, globalData }) {
                 </p>
               </motion.div>
         </div>
-        </FadeInWhenVisible>
+        </FadeInWhenVisible> */}
 
         <Services />
 
