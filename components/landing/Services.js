@@ -102,17 +102,13 @@ export default function Services(){
        
           <div className="mx-auto lg:p-12 text-center text-base">
             <div className="lg:grid lg:grid-cols-3 lg:gap-4">
-              <motion.div
-                whileHover={{ scale: 1.015 }}
-              >
-              <div>
                 <div className="p-6 max-w-sm rounded-xl backdrop-blur-lg bg-white/10 dark:bg-black/30 hover:bg-kimmi-teal/30 dark:hover:bg-kimmi-teal/20 transition border border-kimmi-teal dark:border-white border-opacity-10 dark:border-opacity-10 transform lg:-skew-y-6 lg:hover:transform-none">
-                  <div className="flex mx-auto w-full justify-center items-center">  
+                    <div className="flex mx-auto w-full justify-center items-center">  
                     <MdDesignServices className="w-24 text-center h-24 p-2" size='fa-2x' />
-                  </div>
-                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Design</h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-                  <button 
+                    </div>
+                    <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Design</h5>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                    <button 
                         className="flex rounded-md items-center justify-end w-full py-2 text-base text-center ml-8 -mb-4"
                         type="button"
                         onClick={openModal}
@@ -253,19 +249,13 @@ export default function Services(){
                         </Dialog>
                     </Transition> 
                 </div>
-              </div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.015 }}
-              >
-              <div>
                 <div className="p-6 max-w-sm rounded-xl backdrop-blur-lg bg-white/10 dark:bg-black/30 hover:bg-kimmi-teal/30 dark:hover:bg-kimmi-teal/20 transition border border-kimmi-teal dark:border-white border-opacity-10 dark:border-opacity-10">
-                  <div className="flex mx-auto w-full justify-center items-center">  
+                    <div className="flex mx-auto w-full justify-center items-center">  
                     <HiOutlineDesktopComputer className="w-24 text-center h-24 p-2" size='fa-2x' />
-                  </div>
-                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Front-End</h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-                  <button 
+                    </div>
+                    <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Front-End</h5>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+                    <button 
                         className="flex rounded-md items-center justify-end w-full py-2 text-base text-center ml-8 -mb-4"
                         type="button"
                         onClick={openModal2}
@@ -432,19 +422,13 @@ export default function Services(){
                         </Dialog>
                     </Transition> 
                 </div>
-              </div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.015 }}
-              >
-              <div>
                 <div className="p-6 max-w-sm rounded-xl backdrop-blur-lg bg-white/10 dark:bg-black/30 hover:bg-kimmi-teal/30 dark:hover:bg-kimmi-teal/20 transition border border-kimmi-teal dark:border-white border-opacity-10 dark:border-opacity-10 lg:transform lg:skew-y-6 lg:hover:transform-none">
-                  <div className="flex mx-auto w-full justify-center items-center">  
+                    <div className="flex mx-auto w-full justify-center items-center">  
                     <BsCodeSquare className="w-24 text-center h-24 p-2" size='fa-2x' />
-                  </div>
-                  <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Back-End</h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I am passionate about building excellent things that improves the lives of everyone.</p>
-                  <button 
+                    </div>
+                    <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Back-End</h5>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I am passionate about building excellent things that improves the lives of everyone.</p>
+                    <button 
                         className="flex rounded-md items-center justify-end w-full py-2 text-base text-center ml-8 -mb-4"
                         type="button"
                         onClick={openModal3}
@@ -602,8 +586,6 @@ export default function Services(){
                         </Dialog>
                     </Transition> 
                 </div>
-              </div>
-              </motion.div>
             </div>
           </div>
     )

@@ -114,6 +114,7 @@ export default function Header() {
  const menuItems = [
    { title: "About Me", url: "#" },
    { title: "My Works", url: "#" },
+   { title: "My Thoughts", url: "https://themorningbeans.com" },
  ];
 return (
  <header className={`w-full sticky flex z-40 top-0 trasition ease-in-out duration-500 ${animateHeader && "lg:px-8"}`}>
