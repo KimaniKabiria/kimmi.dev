@@ -47,7 +47,7 @@ function ContactDialog() {
             type="button"
             onClick={openModal}
         >
-            <p className="flex lg:block my-2 text-white font-bold">Let's Build</p>                        
+            <p className="flex lg:block my-2 text-white font-bold">Let&apos;s Build</p>                        
         </button>  
     
             <Transition appear show={isOpen} as={Fragment}>
@@ -97,7 +97,7 @@ function ContactDialog() {
                         </div>
                         <div className="mt-2 border-t-2 border-white">
                             <p className="p-2 text-sm text-white text-center">
-                                Let build domething that will live on the internet.
+                                Let&apos;s build domething that will live on the internet.
                             </p>
                         </div>
                     </div>
