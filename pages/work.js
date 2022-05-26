@@ -336,7 +336,7 @@ export default function Work({ posts, globalData }) {
                     </article>
                   </a>
 
-                  <a href="https://mojochiq.com">
+                  <a href="https://kimmidev.netlify.app/">
                     <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-red-100/30 dark:bg-red-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
                         <button className="flex rounded-md items-center justify-end w-full text-base text-center ml-16 -mb-4" type="button">
                             <p className="inline-flex items-center px-8 text-sm font-medium text-right bg-kimmi-teal rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-kimmi-teal dark:hover:bg-kimmi-teal">
