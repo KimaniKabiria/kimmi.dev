@@ -113,7 +113,7 @@ export default function Header() {
  }, []);
  const menuItems = [
    { title: "About Me", url: "#" },
-   { title: "My Works", url: "#" },
+   { title: "My Works", url: "work" },
    { title: "My Thoughts", url: "https://themorningbeans.com" },
  ];
 return (
@@ -140,7 +140,7 @@ return (
           <div className="flex flex-col lg:flex-row mx-auto w-full items-center lg:px-4">          
             <div className="inline-flex lg:flex justify-start mx-auto">
               <div className={`flex-shrink w-48 ${animateHeader && "w-40"} flex`}>
-                <Link href="\" passHref>
+                <Link href="index" passHref>
                   <div className="dark:hidden block">
                       <Image
                         className=""
@@ -151,7 +151,7 @@ return (
                       />
                     </div>
                   </Link>
-                <Link href="\" passHref>
+                <Link href="index" passHref>
                     <div className="hidden dark:block">
                       <Image
                         className=""

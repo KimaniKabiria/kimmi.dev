@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Typewriter from 'typewriter-effect'
 import { motion, useAnimation, useMotionValue, useTransform } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RainbowHighlight } from "../includes/RainbowHighlight"
 
 import AboutSVG from "../../assets/images/about.svg"
 
@@ -57,53 +59,58 @@ export default function AboutSection(){
         x.set(event.clientX - rect.left);
         y.set(event.clientY - rect.top);
     }
+    
+    const colors = ["#009193", "#84CC16", "#10B981", "#3B82F6"];
 
     return(
-        <FadeInWhenVisible>            
-            <div className='py-20 lg:px-40 px-12 lg:-mx-20 -mx-8 my-12 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10'>
-                <motion.div
-                whileHover={{ scale: 1.05 }}
-                >
-                <h1 className="lg:text-3xl text-2xl text-center px-8 py-4">
-                    Hi there, I am <span className='underline font-bold text-kimmi-teal'>Kimani Kabiria</span>, Nice to meet you
-                </h1>
-                </motion.div>
-                <div className="flex flex-col lg:flex-row w-full items-center justify-center text-center">
-                    <div className="flex flex-col mx-auto p-4">
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <h1 className="lg:text-7xl text-2xl font-semibold">designer</h1>
-                            <p className="p-4">Product designer specialising in UI design and design systems</p>
-                        </motion.div>
-                    </div>
-                    <div className="flex" onMouseMove={handleMouse} >
-                        <motion.div
-                            style={{
-                                rotateX: rotateX,
-                                rotateY: rotateY,
-                            }}
-                            className="flex lg:p-8 justify-center items-center"
-                        >
-                            <div className="flex w-xl">
-                                <Image
-                                className=""
-                                src={AboutSVG}
-                                alt="AboutSVG"
-                                />
-                            </div>
-                        </motion.div>
-                    </div>
-                    <div className="flex flex-col mx-auto p-4">
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <h1 className="lg:text-7xl text-2xl font-semibold">&#60;coder&#62;</h1>
-                            <p className="p-4">Full-Stack developer who writes clean, elegant and efficient code</p>
-                        </motion.div>
+        <FadeInWhenVisible>       
+                <div className='py-20 lg:px-40 px-12 lg:-mx-20 -mx-8 my-12 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10'>
+                    
+                        <h1 className="lg:text-3xl text-2xl text-center px-8 py-4">
+                            Hi there, I am&nbsp;
+                            <RainbowHighlight color={colors[2]}>Kimani Kabiria</RainbowHighlight> 
+                            &nbsp;Nice to meet you
+                        </h1>
+                    <div className="flex flex-col lg:flex-row w-full items-center justify-center text-center">
+                        <div className="flex flex-col mx-auto p-4">
+                            <RainbowHighlight color={colors[1]}>
+                                <h1 className="lg:text-7xl text-2xl font-semibold">designer</h1>
+                            </RainbowHighlight>
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                <p className="p-4">Product designer specialising in UI design and design systems</p>
+                            </motion.div>
+                        </div>
+                        <div className="flex" onMouseMove={handleMouse} >
+                            <motion.div
+                                style={{
+                                    rotateX: rotateX,
+                                    rotateY: rotateY,
+                                }}
+                                className="flex lg:p-8 justify-center items-center"
+                            >
+                                <div className="flex w-xl">
+                                    <Image
+                                    className=""
+                                    src={AboutSVG}
+                                    alt="AboutSVG"
+                                    />
+                                </div>
+                            </motion.div>
+                        </div>
+                        <div className="flex flex-col mx-auto p-4">
+                            <RainbowHighlight color={colors[3]}>
+                                <h1 className="lg:text-7xl text-2xl font-semibold">&#60;coder&#62;</h1>
+                            </RainbowHighlight>
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                <p className="p-4">Full-Stack developer who writes clean, elegant and efficient code</p>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </FadeInWhenVisible>
     )
 }

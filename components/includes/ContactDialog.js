@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { LockOpenIcon, ChevronDownIcon, BriefcaseIcon, InformationCircleIcon, XIcon } from "@heroicons/react/outline"
 import PropTypes from "prop-types";
 import Link from 'next/link'
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 
 function ContactDialog() {
@@ -38,16 +39,23 @@ function ContactDialog() {
             .then(() => navigate(form.getAttribute('action')))
             .catch((error) => alert(error))
     }
+    
 
   return (
     <>
-      
       <button 
-            className="group flex rounded-xl items-center px-12 py-2 text-base bg-kimmi-teal"
+            className="group flex items-center px-12 py-2 text-xl"
             type="button"
             onClick={openModal}
         >
-            <p className="flex lg:block my-2 text-white font-bold">Let&apos;s Build</p>                        
+            <RoughNotation 
+                type="circle"
+                show = {true}
+                animate = {true}
+                color="#009193"
+            >
+                <p className="p-4 font-extrabold">Let&apos;s Build</p>
+            </RoughNotation>                       
         </button>  
     
             <Transition appear show={isOpen} as={Fragment}>

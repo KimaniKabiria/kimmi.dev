@@ -5,6 +5,7 @@ import { getGlobalData } from '../../utils/global-data';
 import Header from './Header';
 import SEO from './SEO';
 import Footer from './Footer';
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export function GradientBackground({ variant, className }) {
   const classes = classNames(
@@ -54,16 +55,17 @@ export default function Layout({ children, globalData }) {
   }, []);
 
   return (
-    <section className='flex flex-col'>
+    <section className=''>
+    {/* <RoughNotationGroup show={true}> */}
       <SEO title={globalData.name} description={globalData.blogTitle} />     
       <Header name={globalData.name} />
-      <div className="pb-24 pt-12 overflow-hidden"> 
-        <div className="flex flex-col items-center lg:px-12 px-8 w-full mx-auto">
+      {/* <div className="pb-24 pt-12 overflow-hidden"> 
+        <div className="lg:px-12 px-8 w-full mx-auto"> */}
           <main className="w-full">
             {children}
           </main>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
         variant="large"
@@ -73,6 +75,7 @@ export default function Layout({ children, globalData }) {
         variant="small"
         className="absolute w-screen lg:w-1/2 bottom-0 opacity-20 dark:opacity-10"
       />
+      {/* </RoughNotationGroup> */}
     </section>
   );
 }
