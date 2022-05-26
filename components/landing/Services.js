@@ -15,33 +15,6 @@ import Design from "../../assets/images/design.svg"
 import FrontEnd from "../../assets/images/front-end.svg"
 import Code from "../../assets/images/about.svg"
 
-
-function FadeInWhenVisible({ children }) {
-    const controls = useAnimation();
-    const [ref, inView] = useInView();
-  
-    useEffect(() => {
-      if (inView) {
-        controls.start("visible");
-      }
-    }, [controls, inView]);
-  
-    return (
-      <motion.div
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        transition={{ duration: 0.8 }}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0.8 }
-        }}
-      >
-        {children}
-      </motion.div>
-    );
-}
-
 export default function Services(){
   
     let [isOpen, setIsOpen] = useState(false)
@@ -98,9 +71,8 @@ export default function Services(){
 
   
 
-    return(
-       
-          <div className="flex justify-center mx-auto lg:p-12 text-center text-base">
+    return(       
+        <div className="flex justify-center mx-auto lg:p-12 text-center text-base">
             <div className="lg:grid lg:grid-cols-3">
                 <motion.div
                     whileHover={{ scale: 0.95 }}
@@ -140,7 +112,7 @@ export default function Services(){
                                 >
                                 <div className="fixed inset-0 bg-black/20 backdrop-filter backdrop-blur-lg backdrop-saturate-150" aria-hidden="true" />
                                 </Transition.Child>
-    
+
                                 {/* This element is to trick the browser into centering the modal contents. */}
                                 <span
                                     className="inline-block h-screen align-middle"
@@ -500,6 +472,6 @@ export default function Services(){
                     </div>
                 </motion.div>
             </div>
-          </div>
+        </div>
     )
 }
