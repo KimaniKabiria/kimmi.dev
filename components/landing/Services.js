@@ -10,6 +10,7 @@ import { CgFigma } from "react-icons/cg";
 import { SiAdobexd, SiAdobeillustrator, SiAdobephotoshop, SiReact, SiJavascript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiFlutter, SiPhp, SiPython, SiKotlin, SiSwift, SiMysql, SiPostgresql, SiLaravel, SiDjango } from "react-icons/si";
 import { HiOutlineDesktopComputer } from "react-icons/hi"
 import{ BsCodeSquare } from "react-icons/bs"
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 import Design from "../../assets/images/design.svg"
 import FrontEnd from "../../assets/images/front-end.svg"
@@ -133,7 +134,13 @@ export default function Services(){
                                     <div>
                                         <div className="flex flex-row items-start w-full">
                                             <Dialog.Title as="h3" className="w-full p-2 lg:px-8">
-                                                <h1 className="text-3xl font-black underline p-2">DESIGN</h1>
+                                                <h1 className="text-3xl font-black p-2">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={2}
+                                                    >DESIGN</RoughNotation>
+                                            </h1>
                                             </Dialog.Title>
                                             <button className='p-2 focus:outline-none' onClick={closeModal}>
                                                 <XIcon className="block h-6 w-6"/>
@@ -157,11 +164,22 @@ export default function Services(){
                                         </div>
                                         <div className="flex flex-col lg:w-1/2"> 
                                             <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">Things I enjoy designing:</h3>
+                                                <h3 className="font-bold">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={2}
+                                                    >Things I enjoy designing:</RoughNotation></h3>
                                                 <p className="p-2 font-black">UI - UX - Web - Mobile - Apps - Logos</p>
                                             </div>
                                             <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">My Design Tools</h3>
+                                                <h3 className="font-bold">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={2}
+                                                    >My Design Tools</RoughNotation>
+                                                    </h3>
                                                 <div className="text-base">
                                                     <motion.ul variants={container} initial="hidden" animate="show">
                                                     <motion.li variants={item} className="flex flex-row items-center">

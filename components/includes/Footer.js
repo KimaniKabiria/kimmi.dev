@@ -3,7 +3,10 @@ import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa'
 import { SiAdobexd, SiAdobeillustrator, SiAdobephotoshop, SiReact, SiJavascript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiFlutter, SiPhp, SiPython, SiKotlin, SiSwift, SiMysql, SiPostgresql, SiLaravel, SiDjango } from "react-icons/si";
 import ContactDialog from './ContactDialog';
 
+import { RainbowHighlight } from './RainbowHighlight';
+
 import Phone from "../../assets/images/phone.svg"
+import { RoughNotation } from 'react-rough-notation';
 
 const sunIcon = (
   <svg
@@ -84,13 +87,24 @@ const ThemeSwitcher = () => {
 };
 
 export default function Footer({ copyrightText }) {
+
+  const colors = ["#009193", "#84CC16", "#10B981", "#3B82F6"];
+
   return (
     <footer className="pt-16 w-full flex flex-col items-center mx-auto">
       <div className='flex flex-col w-5/6 p-8 lg:p-12 lg:mx-20 items-center justify-center text-center bg-black/10 dark:bg-white/10 rounded-2xl'>
-        <h1 className='text-sm underline font-semibold'>Not Your Average Designer / Developer</h1>
+        <h1 className='text-sm font-semibold'>
+          <RoughNotation
+            type='underline'
+          >
+            Not Your Average Designer / Developer
+          </RoughNotation></h1>
         <div className='flex lg:flex-row flex-col p-4 lg:p-8 items-center'>
           <div className='flex flex-col text-left'>
-            <h1 className='lg:text-5xl text-2xl font-semibold'>Where do we start?</h1>
+            <h1 className='lg:text-5xl text-2xl font-semibold'>
+                    <RainbowHighlight color={colors[2]}>Where do we start?
+                    </RainbowHighlight>
+            </h1>
             <p className='text-base lg:p-4'>Schedule a call so I can learn about your product and we can discuss the best way to help you meet your goals.</p>
             <div className='p-4'>
               <ContactDialog />

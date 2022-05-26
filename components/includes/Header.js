@@ -119,7 +119,7 @@ export default function Header() {
 return (
  <header className={`w-full sticky flex z-40 top-0 trasition ease-in-out duration-500 ${animateHeader && "lg:px-8"}`}>
       {/* <div className="mx-auto "> */}
-        <div className={`flex w-full py-4 lg:px-12 justify-between items-start lg:items-center backdrop-filter backdrop-blur-lg ${animateHeader && "py-2 bg-white/10 dark:bg-black/10 border-2 border-kimmi-teal/10 m-2 rounded-2xl"} mx-auto px-8 trasition ease-in-out duration-500`}>
+        <div className={`flex w-full py-4 lg:px-12 justify-between items-start lg:items-center backdrop-filter backdrop-blur-lg ${animateHeader && "lg:py-2 bg-white/10 dark:bg-black/10 border-2 border-kimmi-teal/10 lg:m-2 rounded-2xl"} mx-auto px-8 trasition ease-in-out duration-500`}>
                 
           <div className="flex h-12 lg:hidden">
               <button
@@ -139,7 +139,7 @@ return (
 
           <div className="flex flex-col lg:flex-row mx-auto w-full items-center lg:px-4">          
             <div className="inline-flex lg:flex justify-start mx-auto">
-              <div className={`flex-shrink w-48 ${animateHeader && "w-40"} flex`}>
+              <div className={`flex-shrink w-48 ${animateHeader && "lg:w-40"} flex`}>
                 <Link href="index" passHref>
                   <div className="dark:hidden block">
                       <Image

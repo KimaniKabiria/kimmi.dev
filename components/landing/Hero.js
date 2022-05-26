@@ -71,7 +71,7 @@ export default function Hero(){
         }, 300);
     };
     return(
-        <div className="flex flex-col lg:flex-row -mt-8 lg:mt-0 lg:px-12 2xl:px-32 2xl:mt-20 pb-20 overflow-hidden">
+        <div className="flex flex-col lg:flex-row lg:mt-0 px-4 lg:px-12 2xl:px-32 2xl:mt-20 lg:pb-20 overflow-hidden">
             <div className="flex lg:w1/3">
             <motion.div
             whileHover={{ scale: 1.05 }}
