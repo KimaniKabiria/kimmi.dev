@@ -14,13 +14,13 @@ export default function WorkProcess(){
     return(
         <div className="flex flex-col items-center justify-center py-12">
             <div className="w-full py-4 text-center">
-                <h1 className="font-semibold text-2xl">
+                <h1 className="font-semibold text-2xl p-8">
                     <RoughNotation 
                         type="circle"
                         // show = {true}
-                        padding={10}
-                        color="#F72F35"
-                        iterations={2}
+                        padding={30}
+                        color="#008080"
+                        iterations={4}
                     > How I Work!
                     </RoughNotation>
                 </h1>
