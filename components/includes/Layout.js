@@ -55,7 +55,7 @@ export default function Layout({ children, globalData }) {
   }, []);
 
   return (
-    <section className=''>
+    <section className='w-full px-2 mx-auto'>
     <RoughNotationGroup show={true}>
       <SEO title={globalData.name} description={globalData.blogTitle} />     
       <Header name={globalData.name} />
