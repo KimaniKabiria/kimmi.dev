@@ -50,7 +50,7 @@ function ContactDialog() {
         >
             <RoughNotation 
                 type="circle"
-                show = {true}
+                // show = {true}
                 animate = {true}
                 color="#009193"
             >

@@ -56,7 +56,7 @@ export default function Layout({ children, globalData }) {
 
   return (
     <section className=''>
-    {/* <RoughNotationGroup show={true}> */}
+    <RoughNotationGroup show={true}>
       <SEO title={globalData.name} description={globalData.blogTitle} />     
       <Header name={globalData.name} />
       {/* <div className="pb-24 pt-12 overflow-hidden"> 
@@ -67,6 +67,7 @@ export default function Layout({ children, globalData }) {
         {/* </div>
       </div> */}
       <Footer copyrightText={globalData.footerText} />
+      </RoughNotationGroup>
       <GradientBackground
         variant="large"
         className="fixed w-screen lg:w1/2 top-20 opacity-40 dark:opacity-60"
@@ -75,7 +76,6 @@ export default function Layout({ children, globalData }) {
         variant="small"
         className="absolute w-screen lg:w-1/2 bottom-0 opacity-20 dark:opacity-10"
       />
-      {/* </RoughNotationGroup> */}
     </section>
   );
 }
