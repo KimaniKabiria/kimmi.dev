@@ -1,15 +1,20 @@
 import React, {useEffect} from "react"
 import Link from 'next/link';
+import Image from 'next/image'
 import { getPosts } from '../utils/mdx-utils';
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 import Layout, { GradientBackground } from '../components/includes/Layout';
-import Hero from '../components/landing/Hero';
 import { getGlobalData } from '../utils/global-data';
 import { RainbowHighlight } from "../components/includes/RainbowHighlight";
 import ArrowIcon from '../components/includes/ArrowIcon';
+
+import { GrWordpress} from 'react-icons/gr'
+import { SiWoocommerce, SiAdobeillustrator} from 'react-icons/si'
+import { CgFigma } from "react-icons/cg";
+
+import MojoLogo from "../assets/images/work/mojo_logo.png"
+import MojoLogoW from "../assets/images/work/mojo_white_logo.png"
 
 
 export default function Work({ posts, globalData }) {
@@ -42,11 +47,24 @@ export default function Work({ posts, globalData }) {
               <section className="grid lg:grid-cols-2 2xl:grid-cols-4 grid-cols-1 gap-10 antialiased">
                   
                   <a href="https://mojochiq.com">
-                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-red-100/30 dark:bg-red-100/20 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
-                        <div className="min-h-62">
-                            {/* <img className="mx-auto" src="https://demo.happyaddons.com/wp-content/uploads/2019/05/card-image13a.png" alt="" /> */}
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-red-100/30 dark:bg-red-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
+                        <div className="min-h-62 p-12">
+                          <div className="block dark:hidden">
+                            <Image
+                            className=""
+                            src={MojoLogo}
+                            alt="MojoLogo"
+                            />
+                          </div>
+                          <div className="hidden dark:block">
+                            <Image
+                            className=""
+                            src={MojoLogoW}
+                            alt="MojoLogoW"
+                            />
+                          </div>
                         </div>
-                        <h1 className="font-extrabold text-6xl mt-28 mb-10 text-kimmi-teal dark:text-white">      
+                        <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
                         <RoughNotation
                             type='box'
                             padding={4}
@@ -55,8 +73,14 @@ export default function Work({ posts, globalData }) {
                         </h1>
                           <h2 className="font-bold text-xl mb-5">MojoChiq</h2>
                         <p className="text-sm leading-relaxed">
-                            MojoChiq is online jewelry store. I designed their online branding (Logo, Website and Socials). I built their website using wordpress and WooCommerce.
+                            MojoChiq is online accessories store. I designed their online branding (Logo, Website and Socials). I built their website using wordpress and WooCommerce.
                         </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <GrWordpress className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiWoocommerce className="w-24 pr-4 text-right -mt-4" size='fa-2x' />
+                        </div>
                     </article>
                   </a>
 
