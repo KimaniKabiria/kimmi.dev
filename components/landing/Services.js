@@ -139,6 +139,7 @@ export default function Services(){
                                                         type="underline"
                                                         // show = {true}
                                                         padding={2}
+                                                        animate={false}
                                                     >DESIGN</RoughNotation>
                                             </h1>
                                             </Dialog.Title>
@@ -163,24 +164,26 @@ export default function Services(){
                                             </p>
                                         </div>
                                         <div className="flex flex-col lg:w-1/2"> 
-                                            <div className="p-3">
+                                            <div className="">
                                                 <h3 className="font-bold">
                                                     <RoughNotation 
                                                         type="underline"
                                                         // show = {true}
-                                                        padding={2}
+                                                        padding={8}
+                                                        animate={false}
                                                     >Things I enjoy designing:</RoughNotation></h3>
                                                 <p className="p-2 font-black">UI - UX - Web - Mobile - Apps - Logos</p>
                                             </div>
-                                            <div className="p-3">
+                                            <div className="">
                                                 <h3 className="font-bold">
                                                     <RoughNotation 
                                                         type="underline"
                                                         // show = {true}
-                                                        padding={2}
+                                                        padding={10}
+                                                        animate={false}
                                                     >My Design Tools</RoughNotation>
                                                     </h3>
-                                                <div className="text-base">
+                                                <div className="p-3 text-base">
                                                     <motion.ul variants={container} initial="hidden" animate="show">
                                                     <motion.li variants={item} className="flex flex-row items-center">
                                                         <CgFigma className="w-12 h-12 p-2" size='fa-2x' /> 
@@ -269,7 +272,13 @@ export default function Services(){
                                     <div>
                                         <div className="flex flex-row items-start w-full">
                                             <Dialog.Title as="h3" className="w-full p-4">
-                                                <h1 className="text-3xl font-black underline p-2">FRONT-END</h1>
+                                                <h1 className="text-3xl font-black p-2">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={2}
+                                                        animate={false}
+                                                    >FRONT-END</RoughNotation></h1>
                                             </Dialog.Title>
                                             <button className='p-2 focus:outline-none' onClick={closeModal2}>
                                                 <XIcon className="block h-6 w-6"/>
@@ -292,13 +301,25 @@ export default function Services(){
                                             </p>
                                         </div>
                                         <div className="flex flex-col lg:w-1/2"> 
-                                            <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">Languages I speak:</h3>
-                                                <p className="p-2 font-black">HTML - JavaScript - JSX - CSS - Sass - Less</p>
+                                            <div className="">
+                                                <h3 className="font-bold">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={8}
+                                                        animate={false}
+                                                    >Languages I speak:</RoughNotation></h3>
+                                                <p className="p-3 font-black">HTML - JavaScript - JSX - CSS - Sass - Less</p>
                                             </div>
-                                            <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">My Design Tools</h3>
-                                                <div className="flex flex-col lg:flex-row">
+                                            <div className="">
+                                                <h3 className="font-bold">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={10}
+                                                        animate={false}
+                                                    >My Design Tools</RoughNotation></h3>
+                                                <div className="p-3 -ml-12 flex flex-col lg:flex-row">
                                                     <motion.ul variants={container} initial="hidden" animate="show" className="mx-auto">
                                                     <motion.li variants={item} className="flex flex-row items-center">
                                                         <SiReact className="w-12 h-12 p-2" size='fa-2x' /> 
@@ -413,7 +434,13 @@ export default function Services(){
                                     <div>
                                         <div className="flex flex-row items-start w-full">
                                             <Dialog.Title as="h3" className="w-full p-2">
-                                                <h1 className="text-3xl font-black underline p-4">BACK-END</h1>
+                                                <h1 className="text-3xl font-black p-4">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={2}
+                                                        animate={false}
+                                                    >BACK-END</RoughNotation></h1>
                                             </Dialog.Title>
                                             <button className='p-2 focus:outline-none' onClick={closeModal3}>
                                                 <XIcon className="block h-6 w-6"/>
@@ -435,13 +462,25 @@ export default function Services(){
                                             </p>
                                         </div>
                                         <div className="flex flex-col lg:w-1/2"> 
-                                            <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">Things I enjoy building:</h3>
+                                            <div className="">
+                                                <h3 className="font-bold">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={8}
+                                                        animate={false}
+                                                    >Things I enjoy building:</RoughNotation></h3>
                                                 <p className="p-2 font-black">Full Stack applications - Websites & Web apps - Mobile Apps - APIs</p>
                                             </div>
-                                            <div className="p-3">
-                                                <h3 className="font-bold pb-2 border-b-2">My ToolBox</h3>
-                                                <div className="flex flex-col lg:flex-row">
+                                            <div className="">
+                                                <h3 className="font-bold">
+                                                    <RoughNotation 
+                                                        type="underline"
+                                                        // show = {true}
+                                                        padding={10}
+                                                        animate={false}
+                                                    >My ToolBox</RoughNotation></h3>
+                                                <div className="p-3 -ml-12 flex flex-col lg:flex-row">
                                                     <motion.ul variants={container} initial="hidden" animate="show" className="mx-auto">
                                                     <motion.li variants={item} className="flex flex-row items-center">
                                                         <SiPhp className="w-12 h-12 p-2" size='fa-2x' /> 
