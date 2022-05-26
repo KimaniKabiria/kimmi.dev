@@ -3,48 +3,26 @@ import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 import Layout, { GradientBackground } from '../components/includes/Layout';
 import Hero from '../components/landing/Hero';
 import { getGlobalData } from '../utils/global-data';
-
-function FadeInWhenVisible({ children }) {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      transition={{ duration: 0.8 }}
-      variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0.8 }
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { RainbowHighlight } from "../components/includes/RainbowHighlight";
 
 
 export default function Work({ posts, globalData }) {
+
+    const colors = ["#009193", "#84CC16", "#10B981", "#3B82F6"];
   
   return (
     <Layout globalData={globalData}>
-        <FadeInWhenVisible>
-            <div className="flex flex-col justify-center items-center mx-auto max-w-2xl text-center">
+        <div className="flex flex-col p-8 lg:p-20 justify-center items-center mx-auto max-w-2xl text-center">                
+            <RainbowHighlight color={colors[3]}>
                 <h1 className="text-3xl lg:text-5xl font-semibold p-4">/work.</h1>
-                <p className="text-xl">I&apos;ve worked at start-ups, tech companies and corporates on a range of different projects, including design systems, websites and apps.</p>
-            </div>
-        </FadeInWhenVisible>
+            </RainbowHighlight>
+            <p className="text-base p-2 lg:text-md lg:p-4">I&apos;ve worked at start-ups, tech companies and corporates on a range of different projects, including design systems, websites and apps.</p>
+        </div>
     </Layout>
   );
 }

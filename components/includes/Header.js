@@ -140,7 +140,7 @@ return (
           <div className="flex flex-col lg:flex-row mx-auto w-full items-center lg:px-4">          
             <div className="inline-flex lg:flex justify-start mx-auto">
               <div className={`flex-shrink w-48 ${animateHeader && "lg:w-40"} flex`}>
-                <Link href="index" passHref>
+                <Link href="/" passHref>
                   <div className="dark:hidden block">
                       <Image
                         className=""
@@ -151,7 +151,7 @@ return (
                       />
                     </div>
                   </Link>
-                <Link href="index" passHref>
+                <Link href="/" passHref>
                     <div className="hidden dark:block">
                       <Image
                         className=""
@@ -165,13 +165,12 @@ return (
                 </div>
             </div>
 
-            <div className={`${isExpanded ? `block` : `hidden`} w-full flex flex-grow lg:flex lg:items-center lg:w-auto mx-auto`}>
-              <div className="flex w-full lg:justify-end mx-auto">
-                
+            <div className={`${isExpanded ? `block` : `hidden`} w-full flex flex-col lg:flex-row flex-grow lg:flex lg:items-center lg:w-auto mx-auto`}>
+              <div className="hidden lg:flex w-full lg:justify-end mx-auto">
               </div>
-              <div className="flex w-full mt-8 flex-col lg:flex-row lg:mt-0 lg:items-center lg:justify-end mx-auto  text-kimmi-teal">
-                <nav>
-                  <ul className="flex items-center justify-center">
+              <div className="flex w-full mt-4 -ml-4 lg:ml-0 flex-col lg:flex-row lg:mt-0 justify-start items-start lg:items-center lg:justify-end mx-auto  text-kimmi-teal">
+                <nav className="w-full">
+                  <ul className="lg:inline-flex mx-auto lg:flex-row items-center justify-start text-left">
                     {menuItems?.map((item) => (
                       <li key={item?.title}>
                         <Link href={item?.url}>
@@ -183,7 +182,7 @@ return (
                     ))}
                   </ul>
                 </nav>
-                <div>
+                <div className="p-2 lg:p-0">
                   {/* <ContactDialog /> */}
                 </div>
                 <ThemeSwitcher />

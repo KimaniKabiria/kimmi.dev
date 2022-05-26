@@ -14,8 +14,17 @@ export default function WorkProcess(){
     return(
         <div className="flex flex-col items-center justify-center py-12">
             <div className="w-full py-4 text-center">
-                <h1 className="font-semibold text-2xl"> How I Work!</h1>
-                <p className="text-base"> my process to build awesone things</p>
+                <h1 className="font-semibold text-2xl">
+                    <RoughNotation 
+                        type="circle"
+                        // show = {true}
+                        padding={10}
+                        color="#F72F35"
+                        iterations={2}
+                    > How I Work!
+                    </RoughNotation>
+                </h1>
+                <p className="text-base pt-4"> my process to build awesone things</p>
             </div>
             <div className="w-full lg:grid grid-cols-5">
                 
