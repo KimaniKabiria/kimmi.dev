@@ -10,8 +10,9 @@ import { RainbowHighlight } from "../components/includes/RainbowHighlight";
 import ArrowIcon from '../components/includes/ArrowIcon';
 
 import { GrWordpress, GrInProgress} from 'react-icons/gr'
-import { SiWoocommerce, SiAdobeillustrator , SiGhost, SiNextdotjs, SiTailwindcss, SiReact, SiPostgresql } from 'react-icons/si'
+import { SiWoocommerce, SiAdobeillustrator , SiGhost, SiNextdotjs, SiTailwindcss, SiReact, SiPostgresql, SiGatsby, SiBulma } from 'react-icons/si'
 import { CgFigma } from "react-icons/cg";
+import { GiCancel } from "react-icons/gi"
 
 import MojoLogo from "../assets/images/work/mojo_logo.png"
 import MojoLogoW from "../assets/images/work/mojo_white_logo.png"
@@ -21,6 +22,12 @@ import LogoSVG from "../assets/images/logo.svg"
 import LogoWhiteSVG from "../assets/images/logo-white.svg"
 import LegitLogo from "../assets/images/work/legit_logo.png"
 import LegitLogoW from "../assets/images/work/legit_logo_white.png"
+import HomezLogo from "../assets/images/work/homez_logo.png"
+import HomezLogoW from "../assets/images/work/homez_logo_white.png"
+import MynLogo from "../assets/images/work/myn_logo.png"
+import UnbxdLogo from "../assets/images/work/unbxd_logo.png"
+import UnbxdLogoW from "../assets/images/work/unbxd_logo_white.png"
+import KmdvLogo from "../assets/images/work/kmdv_logo.png"
 
 
 export default function Work({ posts, globalData }) {
@@ -167,8 +174,6 @@ export default function Work({ posts, globalData }) {
 
                   <a href="#">
                     <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-purple-100/20 dark:bg-purple-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">
-                      
-                      
                         <button className="flex rounded-md items-center justify-end w-full text-base text-center ml-16 -mb-4" type="button">
                             <p className="inline-flex items-center px-8 text-sm font-medium text-right bg-kimmi-teal rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-kimmi-teal dark:hover:bg-kimmi-teal">
                               <GrInProgress className="w-8 h-8 pr-4" size='fa-2x' /> On Going
@@ -208,6 +213,160 @@ export default function Work({ posts, globalData }) {
                           <SiTailwindcss className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
                           <SiReact className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
                           <SiPostgresql className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                        </div>
+                    </article>
+                  </a>
+
+                  <a href="#">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-purple-100/20 dark:bg-purple-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">                     
+                        <button className="flex rounded-md items-center justify-end w-full text-base text-center ml-16 -mb-4" type="button">
+                            <p className="inline-flex items-center px-8 text-sm font-medium text-right bg-kimmi-teal rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-kimmi-teal dark:hover:bg-kimmi-teal">
+                              <GrInProgress className="w-8 h-8 pr-4" size='fa-2x' /> On Going
+                            </p>                       
+                        </button>  
+                        <div className="min-h-62 p-12">
+                          <div className="block dark:hidden">
+                            <Image
+                            className=""
+                            src={HomezLogo}
+                            alt="HomezLogo"
+                            />
+                          </div>
+                          <div className="hidden dark:block">
+                            <Image
+                            className=""
+                            src={HomezLogoW}
+                            alt="HomezLogoW"
+                            />
+                          </div>
+                        </div>
+                          <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                          <RoughNotation
+                              type='box'
+                              padding={4}
+                              multiline={true}
+                          >05.</RoughNotation>
+                          </h1>
+                          <h2 className="font-bold text-xl mb-5">Hello Homez</h2>
+                        <p className="text-sm leading-relaxed">
+                            Hello Homez is a SaaS that will offer Real estate listing, management and payments. I am designing and developing the whole platform.
+                        </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiNextdotjs className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiTailwindcss className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiReact className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiPostgresql className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                        </div>
+                    </article>
+                  </a>
+
+                  <a href="https://mynified.com">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-blue-300/20 dark:bg-blue-300/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
+                      <div className="min-h-62 p-12">
+                        <div className="">
+                          <Image
+                          className=""
+                          src={MynLogo}
+                          alt="MynLogo"
+                          />
+                        </div>
+                      </div>
+                        <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                        <RoughNotation
+                            type='box'
+                            padding={4}
+                            multiline={true}
+                        >06.</RoughNotation>
+                        </h1>
+                        <h2 className="font-bold text-xl mb-5">Mynified</h2>
+                        <p className="text-sm leading-relaxed">
+                            Mynified is a company that sells Kenyan Goods in the US & Canada. They needed a rework on web design and development. I devlivered a modern product that changed their game. 
+                        </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <GrWordpress className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiWoocommerce className="w-24 pr-4 text-right -mt-4" size='fa-2x' />
+                        </div>
+                    </article>
+                  </a>
+
+                  <a href="https://unbxdcreatives.netlify.app/">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-yellow-100/30 dark:bg-yellow-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">
+                        <button className="flex rounded-md items-center justify-end w-full text-base text-center ml-16 -mb-4" type="button">
+                            <p className="inline-flex items-center px-8 text-sm font-medium text-right bg-kimmi-teal rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-kimmi-teal dark:hover:bg-kimmi-teal">
+                              <GrInProgress className="w-8 h-8 pr-4" size='fa-2x' /> On Going
+                            </p>                       
+                        </button> 
+                        <div className="min-h-62 p-12">
+                          <div className="block dark:hidden">
+                            <Image
+                            className=""
+                            src={UnbxdLogo}
+                            alt="UnbxdLogo"
+                            />
+                          </div>
+                          <div className="hidden dark:block">
+                            <Image
+                            className=""
+                            src={UnbxdLogoW}
+                            alt="UnbxdLogoW"
+                            />
+                          </div>
+                        </div>
+                          <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                          <RoughNotation
+                              type='box'
+                              padding={4}
+                              multiline={true}
+                          >07.</RoughNotation>
+                          </h1>
+                            <h2 className="font-bold text-xl mb-5">Unbxd Creative Lab</h2>
+                        <p className="text-sm leading-relaxed">
+                            This is an Agenct that offers web design and development services. Its my startup and I am part of the design team and fully developed the front end.
+                        </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiNextdotjs className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiTailwindcss className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                        </div>
+                    </article>
+                  </a>
+
+                  <a href="https://mojochiq.com">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-red-100/30 dark:bg-red-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
+                        <button className="flex rounded-md items-center justify-end w-full text-base text-center ml-16 -mb-4" type="button">
+                            <p className="inline-flex items-center px-8 text-sm font-medium text-right bg-kimmi-teal rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-kimmi-teal dark:hover:bg-kimmi-teal">
+                              <GiCancel className="w-8 h-8 pr-4" size='fa-2x' /> Discontinued
+                            </p>                       
+                        </button> 
+                        <div className="min-h-62 p-12">
+                          <div className="">
+                            <Image
+                            className=""
+                            src={KmdvLogo}
+                            alt="KmdvLogo"
+                            />
+                          </div>
+                        </div>
+                        <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                        <RoughNotation
+                            type='box'
+                            padding={4}
+                            multiline={true}
+                        >08.</RoughNotation>
+                        </h1>
+                          <h2 className="font-bold text-xl mb-5">KimmiDev V1</h2>
+                        <p className="text-sm leading-relaxed">
+                            This was my first portfolio website. I designed and developed the website and discontinued after upgrading to the current version you are looking at.
+                        </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiGatsby className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiBulma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
                         </div>
                     </article>
                   </a>
