@@ -9,12 +9,18 @@ import { getGlobalData } from '../utils/global-data';
 import { RainbowHighlight } from "../components/includes/RainbowHighlight";
 import ArrowIcon from '../components/includes/ArrowIcon';
 
-import { GrWordpress} from 'react-icons/gr'
-import { SiWoocommerce, SiAdobeillustrator} from 'react-icons/si'
+import { GrWordpress, GrInProgress} from 'react-icons/gr'
+import { SiWoocommerce, SiAdobeillustrator , SiGhost, SiNextdotjs, SiTailwindcss, SiReact, SiPostgresql } from 'react-icons/si'
 import { CgFigma } from "react-icons/cg";
 
 import MojoLogo from "../assets/images/work/mojo_logo.png"
 import MojoLogoW from "../assets/images/work/mojo_white_logo.png"
+import MbLogo from "../assets/images/work/mb_logo.png"
+import MbLogoW from "../assets/images/work/mb_white_logo.png"
+import LogoSVG from "../assets/images/logo.svg"
+import LogoWhiteSVG from "../assets/images/logo-white.svg"
+import LegitLogo from "../assets/images/work/legit_logo.png"
+import LegitLogoW from "../assets/images/work/legit_logo_white.png"
 
 
 export default function Work({ posts, globalData }) {
@@ -84,38 +90,127 @@ export default function Work({ posts, globalData }) {
                     </article>
                   </a>
 
-                  <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-yellow-100 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">
-                      <div className="min-h-62">
-                          {/* <img className="mx-auto" src="https://www.dropbox.com/s/8wcoj21a4vxbk7s/tl.png?dl=1" alt="" /> */}
-                      </div>
-                      <h1 className="font-extrabold text-6xl mt-28 mb-10">02.</h1>
-                      <h2 className="font-bold mb-5">Stylish Leather Bag</h2>
-                      <p className="text-sm leading-relaxed">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae repellendus nam! Dolor dignissimos unde, dolore laboriosam atque numquam quam.
-                      </p>
-                  </article>
+                  <a href="https://themorningbeans.com">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-yellow-100/30 dark:bg-yellow-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">
+                        <div className="min-h-62 p-12">
+                          <div className="block dark:hidden">
+                            <Image
+                            className=""
+                            src={MbLogo}
+                            alt="MbLogo"
+                            />
+                          </div>
+                          <div className="hidden dark:block">
+                            <Image
+                            className=""
+                            src={MbLogoW}
+                            alt="MbLogoW"
+                            />
+                          </div>
+                        </div>
+                          <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                          <RoughNotation
+                              type='box'
+                              padding={4}
+                              multiline={true}
+                          >02.</RoughNotation>
+                          </h1>
+                            <h2 className="font-bold text-xl mb-5">The Morning Beans</h2>
+                        <p className="text-sm leading-relaxed">
+                            The Morning Beans is my personal tech blog / website. I built it to share my thought on anything tech. I designed the theme and branding of the project.
+                        </p>
+                          <div className="flex mt-6">
+                            <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                            <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                            <SiGhost className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          </div>
+                    </article>
+                  </a>
 
-                  <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-blue-100 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
-                      <div className="min-h-62">
-                          {/* <img className="mx-auto" src="https://www.dropbox.com/s/3e0m3ttp2tdi1ly/chair.png?dl=1" alt="" /> */}
+                  <a href="https://kimmi.dev">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-blue-300/20 dark:bg-blue-300/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
+                      <div className="min-h-62 p-12">
+                        <div className="block dark:hidden">
+                          <Image
+                          className=""
+                          src={LogoSVG}
+                          alt="LogoSVG"
+                          />
+                        </div>
+                        <div className="hidden dark:block">
+                          <Image
+                          className=""
+                          src={LogoWhiteSVG}
+                          alt="LogoWhiteSVG"
+                          />
+                        </div>
                       </div>
-                      <h1 className="font-extrabold text-6xl mt-28 mb-10">03.</h1>
-                      <h2 className="font-bold mb-5">Modern Wooden Chair</h2>
-                      <p className="text-sm leading-relaxed">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae repellendus nam! Dolor dignissimos unde, dolore laboriosam atque numquam quam.
-                      </p>
-                  </article>
+                        <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                        <RoughNotation
+                            type='box'
+                            padding={4}
+                            multiline={true}
+                        >03.</RoughNotation>
+                        </h1>
+                        <h2 className="font-bold text-xl mb-5">kimmi.dev</h2>
+                        <p className="text-sm leading-relaxed">
+                            This is my personal protfolio, basically whay you have been looking at. It is my 2nd version of my profolio. Designed the glassmorphic UI and codded the font end.
+                        </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiNextdotjs className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiTailwindcss className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                        </div>
+                    </article>
+                  </a>
 
-                  <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-purple-100 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">
-                      <div className="min-h-62">
-                          {/* <img className="mx-auto" src="https://www.dropbox.com/s/lllrkvwvfn97piz/toppng.com-furniture-1200x957.png?dl=1" alt="" /> */}
-                      </div>
-                      <h1 className="font-extrabold text-6xl mt-28 mb-10">04.</h1>
-                      <h2 className="font-bold mb-5">Comfortable Chair</h2>
-                      <p className="text-sm leading-relaxed">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae repellendus nam! Dolor dignissimos unde, dolore laboriosam atque numquam quam.
-                      </p>
-                  </article>
+                  <a href="#">
+                    <article className="flex flex-col shadow-xl mx-auto max-w-sm bg-purple-100/20 dark:bg-purple-100/10 py-20 px-12 transform duration-500 hover:-translate-y-2 cursor-pointer mt-0 md:mt-20 max-h-190 rounded-md">
+                      
+                      
+                        <button className="flex rounded-md items-center justify-end w-full text-base text-center ml-16 -mb-4" type="button">
+                            <p className="inline-flex items-center px-8 text-sm font-medium text-right bg-kimmi-teal rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-kimmi-teal dark:hover:bg-kimmi-teal">
+                              <GrInProgress className="w-8 h-8 pr-4" size='fa-2x' /> On Going
+                            </p>                       
+                        </button>  
+                        <div className="min-h-62 p-12">
+                          <div className="block dark:hidden">
+                            <Image
+                            className=""
+                            src={LegitLogo}
+                            alt="LegitLogo"
+                            />
+                          </div>
+                          <div className="hidden dark:block">
+                            <Image
+                            className=""
+                            src={LegitLogoW}
+                            alt="LegitLogoW"
+                            />
+                          </div>
+                        </div>
+                          <h1 className="font-extrabold text-6xl mb-10 text-kimmi-teal dark:text-white">      
+                          <RoughNotation
+                              type='box'
+                              padding={4}
+                              multiline={true}
+                          >04.</RoughNotation>
+                          </h1>
+                          <h2 className="font-bold text-xl mb-5">Legit-ID</h2>
+                        <p className="text-sm leading-relaxed">
+                            Legit ID is a SaaS built to offer online identity verification. I am Designed and built the front-end. I an currently working on the back-end.
+                        </p>
+                        <div className="flex mt-6">
+                          <CgFigma className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiAdobeillustrator className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiNextdotjs className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiTailwindcss className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiReact className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                          <SiPostgresql className="w-10 h-10 py-2 pr-4 text-right" size='fa-2x' />
+                        </div>
+                    </article>
+                  </a>
               </section>
           </section>
         </div>

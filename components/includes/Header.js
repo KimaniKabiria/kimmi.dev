@@ -112,7 +112,7 @@ export default function Header() {
    };
  }, []);
  const menuItems = [
-   { title: "About Me", url: "#" },
+  //  { title: "About Me", url: "#" },
    { title: "My Works", url: "work" },
    { title: "My Thoughts", url: "https://themorningbeans.com" },
  ];
@@ -170,7 +170,7 @@ return (
               </div>
               <div className="flex w-full mt-4 -ml-4 lg:ml-0 flex-col lg:flex-row lg:mt-0 justify-start items-start lg:items-center lg:justify-end mx-auto  text-kimmi-teal">
                 <nav className="w-full">
-                  <ul className="lg:inline-flex mx-auto lg:flex-row items-center justify-start text-left">
+                  <ul className="lg:flex mx-auto lg:flex-row items-center justify-start lg:justify-end text-left">
                     {menuItems?.map((item) => (
                       <li key={item?.title}>
                         <Link href={item?.url}>
