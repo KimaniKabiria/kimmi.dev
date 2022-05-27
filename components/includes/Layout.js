@@ -6,6 +6,7 @@ import Header from './Header';
 import SEO from './SEO';
 import Footer from './Footer';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import Head from 'next/head'
 
 export function GradientBackground({ variant, className }) {
   const classes = classNames(
